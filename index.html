@@ -1,77 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Hub</title>
+    <title>Modern News Hub</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Geist+Mono:wght@100..900&family=Lexend:wght@100..900&family=Noto+Sans+Devanagari:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" type="module" defer></script>
 </head>
-
 <body>
-
     <nav>
         <div class="main-nav container">
-
             <div class="nav-wrapper">
                 <a href="/" class="company-logo">
                     <i class="fas fa-newspaper"></i>
                     <span>NewsHub</span>
                 </a>
-
-                <button class="mobile-menu-btn">
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
-
+            
             <div class="nav-content">
-
                 <div class="nav-links">
                     <ul>
-                        <li><button class="nav-item" data-category="technology"><i
-                                    class="fas fa-microchip"></i>Technology</button></li>
-                        <li><button class="nav-item" data-category="business"><i
-                                    class="fas fa-briefcase"></i>Business</button></li>
-                        <li><button class="nav-item" data-category="Health"><i
-                                    class="fas fa-heartbeat"></i>Health</button></li>
-                        <li><button class="nav-item" data-category="Science"><i
-                                    class="fas fa-flask"></i>Science</button></li>
+                        <li><button class="nav-item" data-category="technology">
+                            <i class="fas fa-microchip"></i>Technology
+                        </button></li>
+                        <li><button class="nav-item" data-category="business">
+                            <i class="fas fa-briefcase"></i>Business
+                        </button></li>
+                        <li><button class="nav-item" data-category="health">
+                            <i class="fas fa-heartbeat"></i>Health
+                        </button></li>
+                        <li><button class="nav-item" data-category="science">
+                            <i class="fas fa-flask"></i>Science
+                        </button></li>
                     </ul>
                 </div>
-
+                
                 <div class="search-bar">
                     <input type="text" class="news-input" placeholder="Search news...">
                     <button class="search-button">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
-
             </div>
         </div>
     </nav>
 
     <main>
         <div class="container">
-
             <div class="loading-spinner hidden">
                 <div class="spinner"></div>
             </div>
-
-            <div class=""error-message hidden>
+            
+            <div class="error-message hidden">
                 <i class="fas fa-exclamation-circle"></i>
                 <p></p>
                 <button class="retry-button">Try Again</button>
             </div>
 
             <div class="cards-container"></div>
-
+            
             <button class="load-more hidden">
                 Load More News
                 <i class="fas fa-angle-down"></i>
@@ -80,40 +71,32 @@
     </main>
 
     <template id="news-card-template">
-
         <article class="card">
-
             <div class="card-header">
                 <img src="" alt="" loading="lazy">
                 <span class="category-tag"></span>
             </div>
-
             <div class="card-content">
-
                 <div class="source-info">
                     <img class="source-icon" src="" alt="">
                     <span class="source-name"></span>
                     <span class="publish-date"></span>
                 </div>
-
                 <h3 class="news-title"></h3>
-
                 <p class="news-desc"></p>
-
                 <div class="card-footer">
-                    <button class="share-btn" data-platform="twitter">
-                        <i class="fab fa-twitter"></i>
-                    </button>
-                    <button class="share-btn" data-platform="facebook">
-                        <i class="fab fa-facebook"></i>
-                    </button>
+                    <button class="read-more">Read More</button>
+                    <div class="share-buttons">
+                        <button class="share-btn" data-platform="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button class="share-btn" data-platform="facebook">
+                            <i class="fab fa-facebook"></i>
+                        </button>
+                    </div>
                 </div>
-
             </div>
-
         </article>
-
     </template>
-
 </body>
 </html>
