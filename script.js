@@ -1,7 +1,7 @@
 // Config and Constants
 require('dotenv').config();
 const CONFIG = {
-    API_KEY: process.env.API_KEY,
+    API_KEY: "b1ec3168137949f7921e3268a4cf9206",
     BASE_URL: "https://newsapi.org/v2",
     ENDPOINTS: {
         everything: "/everything",
