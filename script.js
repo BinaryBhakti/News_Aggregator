@@ -1,9 +1,6 @@
 // Config and Constants
 const CONFIG = {
-    key1: "b1ec316813",
-    key2: "7949f7921e3",
-    key3: "268a4cf9206",
-    API_KEY: `${CONFIG.key1}${CONFIG.key2}${CONFIG.key3}`,
+    API_KEY: process.env.API_KEY,
     BASE_URL: "https://newsapi.org/v2",
     ENDPOINTS: {
         everything: "/everything",
