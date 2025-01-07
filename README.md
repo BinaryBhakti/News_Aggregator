@@ -3,6 +3,7 @@
 A modern, responsive news application built with vanilla JavaScript that aggregates news from various sources using the NewsAPI.
 
 ![2](https://github.com/user-attachments/assets/8c8aacc5-ce56-41ac-81b4-9715601ff0c7)
+
 ![3](https://github.com/user-attachments/assets/36f4d25b-2e9f-41cd-816e-989cf9993a77)
 
 
